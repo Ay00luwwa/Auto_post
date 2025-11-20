@@ -14,3 +14,22 @@ INFO 2025-11-11 23:02:50,175 basehttp "GET /static/drf-yasg/swagger-ui-dist/swag
 INFO 2025-11-11 23:02:50,240 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
 INFO 2025-11-11 23:02:50,527 basehttp "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
 INFO 2025-11-11 23:02:50,693 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 10557
+INFO 2025-11-20 02:27:58,390 autoreload Watching for file changes with StatReloader
+WARNING 2025-11-20 02:28:05,626 log Not Found: /
+WARNING 2025-11-20 02:28:05,626 basehttp "GET / HTTP/1.1" 404 3758
+WARNING 2025-11-20 02:28:05,745 log Not Found: /favicon.ico
+WARNING 2025-11-20 02:28:05,746 basehttp "GET /favicon.ico HTTP/1.1" 404 3809
+INFO 2025-11-20 02:28:12,163 basehttp "GET /health HTTP/1.1" 301 0
+INFO 2025-11-20 02:28:12,422 basehttp "GET /health/ HTTP/1.1" 200 5369
+INFO 2025-11-20 02:28:12,648 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-11-20 02:28:12,652 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-11-20 02:28:12,652 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-11-20 02:28:12,656 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-11-20 02:28:12,658 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-11-20 02:28:12,662 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-11-20 02:28:12,662 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-11-20 02:28:12,663 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-11-20 02:28:12,685 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-11-20 02:28:12,693 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-11-20 02:28:12,695 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-11-20 02:28:12,715 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
