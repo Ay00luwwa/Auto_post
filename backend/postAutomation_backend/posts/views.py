@@ -1,20 +1,97 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status, filters, serializers
+from rest_framework.decorators import action
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from django.utils import timezone
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import Post
 from .serializers import PostSerializer
 from .tasks import publish_post
-from datetime import datetime
-from django.utils import timezone
-import pytz
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
+    """
+    ViewSet for managing posts with filtering, search, and permissions
+    """
     serializer_class = PostSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['platform', 'status']
+    search_fields = ['content']
+    ordering_fields = ['scheduled_time', 'created_at', 'status']
+    ordering = ['-scheduled_time']
+
+    def get_queryset(self):
+        """Return posts for the authenticated user only"""
+        return Post.objects.filter(user=self.request.user)
 
     def perform_create(self, serializer):
+        """Create a post and schedule it"""
         post = serializer.save(user=self.request.user)
         # Schedule the post at its scheduled_time
         if post.scheduled_time > timezone.now():
-            publish_post.apply_async((post.id,), eta=post.scheduled_time)
+            task = publish_post.apply_async((post.id,), eta=post.scheduled_time)
         else:
-            publish_post.delay(post.id)
+            task = publish_post.delay(post.id)
+        
+        # Store task ID for potential cancellation
+        post.celery_task_id = task.id
+        post.save(update_fields=['celery_task_id'])
         return post
+
+    def perform_update(self, serializer):
+        """Update post only if it's pending and not yet scheduled"""
+        post = self.get_object()
+        if post.status != 'pending':
+            raise serializers.ValidationError("Only pending posts can be updated.")
+        if post.scheduled_time <= timezone.now():
+            raise serializers.ValidationError("Cannot update posts that are scheduled in the past.")
+        serializer.save()
+
+    @action(detail=True, methods=['post'])
+    def cancel(self, request, pk=None):
+        """Cancel a scheduled post"""
+        from celery import current_app
+        
+        post = self.get_object()
+        if post.status != 'pending':
+            return Response(
+                {'error': 'Only pending posts can be cancelled.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        if post.scheduled_time <= timezone.now():
+            return Response(
+                {'error': 'Cannot cancel posts that are already scheduled.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Revoke the Celery task if it exists
+        if post.celery_task_id:
+            try:
+                current_app.control.revoke(post.celery_task_id, terminate=True)
+            except Exception as e:
+                # Log error but continue with cancellation
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.warning(f"Failed to revoke Celery task {post.celery_task_id}: {e}")
+        
+        post.status = 'cancelled'
+        post.save()
+        return Response({'message': 'Post cancelled successfully.'})
+
+    @action(detail=False, methods=['get'])
+    def stats(self, request):
+        """Get statistics for user's posts"""
+        posts = self.get_queryset()
+        stats = {
+            'total': posts.count(),
+            'pending': posts.filter(status='pending').count(),
+            'posted': posts.filter(status='posted').count(),
+            'failed': posts.filter(status='failed').count(),
+            'cancelled': posts.filter(status='cancelled').count(),
+            'by_platform': {}
+        }
+        
+        for platform_code, platform_name in Post.PLATFORM_CHOICES:
+            stats['by_platform'][platform_name] = posts.filter(platform=platform_code).count()
+        
+        return Response(stats)

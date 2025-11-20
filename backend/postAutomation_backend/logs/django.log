@@ -1,0 +1,16 @@
+INFO 2025-11-11 23:02:05,756 autoreload Watching for file changes with StatReloader
+INFO 2025-11-11 23:02:11,691 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/urls.py changed, reloading.
+INFO 2025-11-11 23:02:13,036 autoreload Watching for file changes with StatReloader
+INFO 2025-11-11 23:02:14,853 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/urls.py changed, reloading.
+INFO 2025-11-11 23:02:15,900 autoreload Watching for file changes with StatReloader
+INFO 2025-11-11 23:02:49,645 basehttp "GET /swagger HTTP/1.1" 301 0
+INFO 2025-11-11 23:02:49,818 basehttp "GET /swagger/ HTTP/1.1" 200 2398
+INFO 2025-11-11 23:02:50,042 basehttp "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+INFO 2025-11-11 23:02:50,055 basehttp "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-11-11 23:02:50,070 basehttp "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-11-11 23:02:50,102 basehttp "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+INFO 2025-11-11 23:02:50,130 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+INFO 2025-11-11 23:02:50,175 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+INFO 2025-11-11 23:02:50,240 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+INFO 2025-11-11 23:02:50,527 basehttp "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+INFO 2025-11-11 23:02:50,693 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 10557
