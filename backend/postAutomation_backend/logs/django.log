@@ -33,3 +33,20 @@ INFO 2025-11-20 02:28:12,685 basehttp "GET /static/rest_framework/js/jquery-3.7.
 INFO 2025-11-20 02:28:12,693 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
 INFO 2025-11-20 02:28:12,695 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
 INFO 2025-11-20 02:28:12,715 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-11-20 02:33:37,876 log Not Found: /docs
+WARNING 2025-11-20 02:33:37,877 basehttp "GET /docs HTTP/1.1" 404 3788
+INFO 2025-11-20 02:33:49,327 basehttp "GET /swagger/ HTTP/1.1" 200 2166
+INFO 2025-11-20 02:33:49,652 basehttp "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-11-20 02:33:49,653 basehttp "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-11-20 02:33:49,653 basehttp "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+INFO 2025-11-20 02:33:49,796 basehttp "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+INFO 2025-11-20 02:33:49,797 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+INFO 2025-11-20 02:33:50,093 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+INFO 2025-11-20 02:33:50,094 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+INFO 2025-11-20 02:33:50,889 basehttp "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+INFO 2025-11-20 02:33:51,640 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 9786
+WARNING 2025-11-20 02:52:03,034 log Not Found: /
+WARNING 2025-11-20 02:52:03,095 basehttp "GET / HTTP/1.1" 404 3758
+WARNING 2025-11-20 02:52:03,367 log Not Found: /favicon.ico
+INFO 2025-11-20 02:52:13,523 basehttp "GET /swagger/ HTTP/1.1" 200 2166
+INFO 2025-11-20 02:52:14,623 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 9786
