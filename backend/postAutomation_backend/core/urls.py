@@ -13,7 +13,7 @@ router = routers.DefaultRouter()
 router.register(r'posts', PostViewSet, basename='posts')
 
 
-# Swagger/OpenAPI documentation
+# Swagger/OpenAPI documentation 
 schema_view = get_schema_view(
    openapi.Info(
       title="Post Automation API",

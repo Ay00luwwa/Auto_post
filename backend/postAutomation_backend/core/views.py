@@ -26,17 +26,14 @@ def health_check(request):
         health_status['services']['database'] = f'unhealthy: {str(e)}'
         health_status['status'] = 'degraded'
     
-    # Check Redis/Celery broker
+
     try:
         from django.conf import settings
         import redis as redis_client
-        
         redis_url = settings.CELERY_BROKER_URL
         if redis_url.startswith('redis://'):
-            # Parse Redis URL
             redis_url = redis_url.replace('redis://', '')
             if '@' in redis_url:
-                # Has password
                 parts = redis_url.split('@')
                 password = parts[0].split(':')[-1] if ':' in parts[0] else None
                 host_port = parts[1]
@@ -45,7 +42,7 @@ def health_check(request):
                 host_port = redis_url
             
             host, port = host_port.split(':') if ':' in host_port else (host_port, 6379)
-            port = int(port.split('/')[0])  # Remove database number if present
+            port = int(port.split('/')[0]) 
             
             r = redis_client.Redis(host=host, port=port, password=password, socket_connect_timeout=2)
             r.ping()
