@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 from rest_framework import routers
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from posts.views import PostViewSet
-from users.views import UserRegistrationView, UserProfileView
+from rest_framework_simplejwt.views import TokenRefreshView
+from posts.views import PostViewSet, SocialAccountViewSet
+from posts.oauth_views import OAuthInitiateView, OAuthCallbackView
+from users.views import UserRegistrationView, UserProfileView, CustomTokenObtainPairView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
@@ -11,6 +12,7 @@ from .views import health_check
 
 router = routers.DefaultRouter()
 router.register(r'posts', PostViewSet, basename='posts')
+router.register(r'social-accounts', SocialAccountViewSet, basename='social-accounts')
 
 
 # Swagger/OpenAPI documentation 
@@ -38,9 +40,13 @@ urlpatterns = [
     
     # Authentication endpoints
     path('api/auth/register/', UserRegistrationView.as_view(), name='register'),
-    path('api/auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/auth/login/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/auth/profile/', UserProfileView.as_view(), name='user_profile'),
+    
+    # OAuth endpoints
+    path('api/oauth/initiate/<str:platform>/', OAuthInitiateView.as_view(), name='oauth_initiate'),
+    path('api/oauth/callback/<str:platform>/', OAuthCallbackView.as_view(), name='oauth_callback'),
     
     # API Documentation
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),

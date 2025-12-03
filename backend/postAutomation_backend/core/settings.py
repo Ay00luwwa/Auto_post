@@ -89,10 +89,11 @@ MIDDLEWARE = [
 # CORS Settings
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    default='http://localhost:3000,http://localhost:8000',
+    default='http://localhost:3000,http://localhost:5173,http://localhost:8000',
     cast=Csv()
 )
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=False, cast=bool)  # Only for development
 
 ROOT_URLCONF = 'core.urls'
 
