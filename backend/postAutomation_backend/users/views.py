@@ -8,6 +8,12 @@ from .serializers import UserRegistrationSerializer, UserSerializer
 
 User = get_user_model()
 
+class CustomTokenObtainPairView(TokenObtainPairView):
+    """
+    Custom login view that explicitly allows unauthenticated access
+    """
+    permission_classes = [AllowAny]
+
 class UserRegistrationView(generics.CreateAPIView):
     """
     Register a new user

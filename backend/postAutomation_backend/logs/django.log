@@ -50,3 +50,642 @@ WARNING 2025-11-20 02:52:03,095 basehttp "GET / HTTP/1.1" 404 3758
 WARNING 2025-11-20 02:52:03,367 log Not Found: /favicon.ico
 INFO 2025-11-20 02:52:13,523 basehttp "GET /swagger/ HTTP/1.1" 200 2166
 INFO 2025-11-20 02:52:14,623 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 9786
+INFO 2025-12-01 20:46:22,852 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-01 20:47:34,679 log Not Found: /
+WARNING 2025-12-01 20:47:34,679 basehttp "GET / HTTP/1.1" 404 3758
+WARNING 2025-12-01 20:47:35,267 log Not Found: /favicon.ico
+WARNING 2025-12-01 20:47:35,268 basehttp "GET /favicon.ico HTTP/1.1" 404 3809
+INFO 2025-12-01 20:47:41,733 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-12-01 20:47:42,254 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+INFO 2025-12-01 20:47:42,630 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-12-01 20:47:42,631 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-12-01 20:47:42,635 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-12-01 20:47:42,636 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-12-01 20:47:42,637 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-12-01 20:47:42,638 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-12-01 20:47:42,642 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-12-01 20:48:06,014 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:48:18,943 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:48:39,816 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:49:06,049 basehttp "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:53:56,240 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/settings.py changed, reloading.
+INFO 2025-12-01 20:53:57,948 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 20:54:26,800 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/users/views.py changed, reloading.
+INFO 2025-12-01 20:54:27,901 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 20:54:31,781 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/urls.py changed, reloading.
+INFO 2025-12-01 20:54:32,891 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 20:54:42,932 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/settings.py changed, reloading.
+INFO 2025-12-01 20:54:43,906 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-01 20:56:43,711 log Unauthorized: /api/
+WARNING 2025-12-01 20:56:43,712 basehttp "GET /api/ HTTP/1.1" 401 5009
+INFO 2025-12-01 20:56:43,855 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-12-01 20:56:43,855 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-12-01 20:56:43,856 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-12-01 20:56:43,862 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-12-01 20:56:43,912 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-12-01 20:56:43,913 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-12-01 20:56:43,913 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-12-01 20:56:43,915 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-12-01 20:56:43,961 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-12-01 20:56:43,962 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-12-01 20:56:43,965 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-12-01 20:56:44,032 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-12-01 20:56:44,171 log Not Found: /favicon.ico
+WARNING 2025-12-01 20:56:44,172 basehttp "GET /favicon.ico HTTP/1.1" 404 3809
+INFO 2025-12-01 20:57:17,505 basehttp "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:57:18,793 basehttp "POST /api/auth/register/ HTTP/1.1" 201 680
+INFO 2025-12-01 20:57:18,803 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:57:18,850 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-01 20:57:18,963 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:57:18,970 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-01 20:57:18,991 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-01 20:57:18,997 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-01 20:57:19,069 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:57:19,071 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:57:19,101 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:57:19,103 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:57:28,942 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:57:28,942 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:57:34,032 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:57:34,035 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:57:38,950 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:57:38,963 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:57:38,982 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:57:38,984 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:59:48,228 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 20:59:48,240 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:59:48,258 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 20:59:48,276 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 21:00:58,545 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/models.py changed, reloading.
+INFO 2025-12-01 21:01:00,323 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:01:58,871 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/admin.py changed, reloading.
+INFO 2025-12-01 21:02:01,115 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:02:10,369 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/tasks.py changed, reloading.
+INFO 2025-12-01 21:02:11,918 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:02:18,188 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/serializers.py changed, reloading.
+INFO 2025-12-01 21:02:19,681 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:02:39,694 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py changed, reloading.
+INFO 2025-12-01 21:02:40,967 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:02:44,891 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/urls.py changed, reloading.
+INFO 2025-12-01 21:02:46,097 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:03:15,847 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py changed, reloading.
+INFO 2025-12-01 21:03:17,459 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:03:29,764 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py changed, reloading.
+INFO 2025-12-01 21:03:30,793 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:03:35,794 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py changed, reloading.
+INFO 2025-12-01 21:03:37,133 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:03:46,574 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/models.py changed, reloading.
+INFO 2025-12-01 21:03:49,378 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:04:18,069 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 21:04:18,070 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-01 21:04:18,091 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 21:04:18,100 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-01 21:05:14,740 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/urls.py changed, reloading.
+INFO 2025-12-01 21:05:16,504 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:05:18,375 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/urls.py changed, reloading.
+INFO 2025-12-01 21:05:19,420 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:05:53,511 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/serializers.py changed, reloading.
+INFO 2025-12-01 21:05:55,117 autoreload Watching for file changes with StatReloader
+INFO 2025-12-01 21:12:46,230 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/models.py changed, reloading.
+INFO 2025-12-01 21:12:56,647 autoreload Watching for file changes with StatReloader
+INFO 2025-12-03 19:44:17,296 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-03 19:44:24,731 log Not Found: /
+WARNING 2025-12-03 19:44:24,731 basehttp "GET / HTTP/1.1" 404 4170
+WARNING 2025-12-03 19:44:24,787 log Not Found: /favicon.ico
+WARNING 2025-12-03 19:44:24,789 basehttp "GET /favicon.ico HTTP/1.1" 404 4221
+WARNING 2025-12-03 19:44:30,158 log Unauthorized: /api/
+WARNING 2025-12-03 19:44:30,160 basehttp "GET /api/ HTTP/1.1" 401 5009
+INFO 2025-12-03 19:45:46,467 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+WARNING 2025-12-03 19:45:46,626 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-03 19:45:46,627 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-12-03 19:45:46,672 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-03 19:45:46,673 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-12-03 19:45:46,680 basehttp "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-12-03 19:45:46,690 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-03 19:45:46,724 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-03 19:45:46,744 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 19:45:46,781 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 19:45:46,957 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-03 19:45:46,968 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-03 19:45:46,990 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:45:47,002 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:45:47,015 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:45:47,064 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:02,014 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-03 19:46:02,954 basehttp "POST /api/auth/login/ HTTP/1.1" 200 483
+INFO 2025-12-03 19:46:02,965 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 19:46:03,035 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:03,041 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:03,049 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:46:03,054 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:46:29,322 basehttp "OPTIONS /api/social-accounts/status/ HTTP/1.1" 200 0
+INFO 2025-12-03 19:46:29,323 basehttp "OPTIONS /api/social-accounts/status/ HTTP/1.1" 200 0
+ERROR 2025-12-03 19:46:29,715 log Internal Server Error: /api/social-accounts/status/
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: posts_socialaccount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py", line 149, in status
+    account = accounts.filter(platform=platform_code).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1104, in first
+    for obj in queryset[:1]:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: posts_socialaccount
+ERROR 2025-12-03 19:46:29,745 log Internal Server Error: /api/social-accounts/status/
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: posts_socialaccount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py", line 149, in status
+    account = accounts.filter(platform=platform_code).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1104, in first
+    for obj in queryset[:1]:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: posts_socialaccount
+ERROR 2025-12-03 19:46:29,753 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 500 173451
+ERROR 2025-12-03 19:46:29,754 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 500 173451
+INFO 2025-12-03 19:46:34,123 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:46:34,131 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:46:38,079 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:38,089 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:39,885 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:39,902 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:46:39,915 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:46:39,916 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:54:12,089 autoreload Watching for file changes with StatReloader
+INFO 2025-12-03 19:54:22,206 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-03 19:54:23,156 basehttp "POST /api/auth/login/ HTTP/1.1" 200 483
+INFO 2025-12-03 19:54:23,207 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-12-03 19:54:23,255 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 19:54:23,375 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:54:23,390 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 19:54:23,394 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 19:54:23,396 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+ERROR 2025-12-03 20:27:59,962 log Internal Server Error: /api/social-accounts/status/
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: posts_socialaccount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py", line 149, in status
+    account = accounts.filter(platform=platform_code).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1104, in first
+    for obj in queryset[:1]:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: posts_socialaccount
+ERROR 2025-12-03 20:27:59,963 log Internal Server Error: /api/social-accounts/status/
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: posts_socialaccount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py", line 149, in status
+    account = accounts.filter(platform=platform_code).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1104, in first
+    for obj in queryset[:1]:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: posts_socialaccount
+ERROR 2025-12-03 20:27:59,974 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 500 173451
+ERROR 2025-12-03 20:27:59,970 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 500 173451
+INFO 2025-12-03 20:28:06,332 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:28:06,334 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:28:06,348 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:06,402 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:07,435 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:07,440 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:22,334 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:22,375 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:22,376 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:28:22,381 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:28:51,456 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:28:51,463 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:29:13,663 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:29:13,666 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:10,923 autoreload Watching for file changes with StatReloader
+INFO 2025-12-03 20:50:14,567 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 20:50:14,575 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 20:50:14,746 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:14,770 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:14,777 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:50:14,778 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:50:17,316 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:50:17,325 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+ERROR 2025-12-03 20:50:23,525 log Internal Server Error: /api/social-accounts/status/
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: posts_socialaccount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py", line 149, in status
+    account = accounts.filter(platform=platform_code).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1104, in first
+    for obj in queryset[:1]:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: posts_socialaccount
+ERROR 2025-12-03 20:50:23,526 log Internal Server Error: /api/social-accounts/status/
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: posts_socialaccount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/posts/views.py", line 149, in status
+    account = accounts.filter(platform=platform_code).first()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1104, in first
+    for obj in queryset[:1]:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ayooluwa/Documents/codes/Auto_post/backend/.venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: posts_socialaccount
+ERROR 2025-12-03 20:50:23,535 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 500 173451
+ERROR 2025-12-03 20:50:23,536 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 500 173451
+INFO 2025-12-03 20:50:27,406 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:27,406 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:28,420 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:28,430 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:50:28,431 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:50:28,440 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:51:16,097 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:51:16,105 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:51:22,104 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time&platform=instagram HTTP/1.1" 200 0
+INFO 2025-12-03 20:51:22,113 basehttp "GET /api/posts/?ordering=-scheduled_time&platform=instagram HTTP/1.1" 200 52
+INFO 2025-12-03 20:51:24,492 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:51:25,862 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:51:25,868 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 20:51:25,883 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 20:51:25,884 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 22:09:37,229 basehttp "GET /swagger/ HTTP/1.1" 200 2166
+INFO 2025-12-03 22:09:37,641 basehttp "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+INFO 2025-12-03 22:09:37,642 basehttp "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+INFO 2025-12-03 22:09:37,655 basehttp "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+INFO 2025-12-03 22:09:37,671 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+INFO 2025-12-03 22:09:37,672 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+INFO 2025-12-03 22:09:37,708 basehttp "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-12-03 22:09:37,790 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+INFO 2025-12-03 22:09:38,189 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 16871
+INFO 2025-12-03 22:09:59,378 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-12-03 22:09:59,380 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+WARNING 2025-12-03 22:09:59,383 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-03 22:09:59,384 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-12-03 22:09:59,398 basehttp "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-12-03 22:09:59,423 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-03 22:09:59,423 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-12-03 22:09:59,442 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-03 22:09:59,476 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-03 22:09:59,497 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 22:09:59,527 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-03 22:09:59,590 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-03 22:09:59,594 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-03 22:09:59,595 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-03 22:09:59,597 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-03 22:09:59,619 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 22:09:59,624 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-03 22:09:59,646 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-03 22:09:59,652 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126

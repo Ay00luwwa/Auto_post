@@ -4,8 +4,8 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Post
-from .serializers import PostSerializer
+from .models import Post, SocialAccount
+from .serializers import PostSerializer, SocialAccountSerializer, SocialAccountCreateSerializer
 from .tasks import publish_post
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -27,6 +27,19 @@ class PostViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """Create a post and schedule it"""
         post = serializer.save(user=self.request.user)
+        
+        # Check if user has connected account for this platform
+        has_account = SocialAccount.objects.filter(
+            user=self.request.user,
+            platform=post.platform,
+            is_active=True
+        ).exists()
+        
+        if not has_account:
+            raise serializers.ValidationError(
+                f"You need to connect your {post.platform} account before scheduling posts."
+            )
+        
         # Schedule the post at its scheduled_time
         if post.scheduled_time > timezone.now():
             task = publish_post.apply_async((post.id,), eta=post.scheduled_time)
@@ -95,3 +108,51 @@ class PostViewSet(viewsets.ModelViewSet):
             stats['by_platform'][platform_name] = posts.filter(platform=platform_code).count()
         
         return Response(stats)
+
+
+class SocialAccountViewSet(viewsets.ModelViewSet):
+    """
+    ViewSet for managing social media account connections
+    """
+    serializer_class = SocialAccountSerializer
+    permission_classes = [IsAuthenticated]
+    
+    def get_queryset(self):
+        """Return social accounts for the authenticated user only"""
+        return SocialAccount.objects.filter(user=self.request.user)
+    
+    def get_serializer_class(self):
+        """Use different serializer for create/update"""
+        if self.action in ['create', 'update', 'partial_update']:
+            return SocialAccountCreateSerializer
+        return SocialAccountSerializer
+    
+    def perform_create(self, serializer):
+        """Create social account for the current user"""
+        serializer.save(user=self.request.user)
+    
+    @action(detail=True, methods=['post'])
+    def disconnect(self, request, pk=None):
+        """Disconnect a social account"""
+        social_account = self.get_object()
+        social_account.is_active = False
+        social_account.save()
+        return Response({'message': f'{social_account.get_platform_display()} account disconnected successfully.'})
+    
+    @action(detail=False, methods=['get'])
+    def status(self, request):
+        """Get connection status for all platforms"""
+        accounts = self.get_queryset()
+        status_dict = {}
+        
+        for platform_code, platform_name in Post.PLATFORM_CHOICES:
+            account = accounts.filter(platform=platform_code).first()
+            status_dict[platform_code] = {
+                'platform': platform_name,
+                'is_connected': bool(account and account.access_token and account.is_active) if account else False,
+                'is_active': account.is_active if account else False,
+                'platform_username': account.platform_username if account else None,
+                'connected_at': account.connected_at.isoformat() if account and account.connected_at else None,
+            }
+        
+        return Response(status_dict)

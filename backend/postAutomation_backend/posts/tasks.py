@@ -1,7 +1,7 @@
 from celery import shared_task
 from django.utils import timezone
-from .models import Post
-import requests
+from .models import Post, SocialAccount
+from .social_integrations import get_platform_integration
 import logging
 
 logger = logging.getLogger(__name__)
@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 @shared_task(bind=True, max_retries=3, default_retry_delay=60)
 def publish_post(self, post_id):
     """
-    Publish a post to the specified platform.
+    Publish a post to the specified platform using real API integrations.
     Retries up to 3 times if it fails.
     """
     try:
@@ -25,35 +25,70 @@ def publish_post(self, post_id):
             logger.info(f"Post {post_id} is already posted")
             return
         
-        logger.info(f"Publishing post {post_id} to {post.platform}")
+        logger.info(f"Publishing post {post_id} to {post.platform} for user {post.user.username}")
         
-        # Simulate posting to platform (you'll replace this with actual API call)
-        # Example for integration: simulate sending to external API
+        # Get the user's social account for this platform
         try:
-            response = requests.post(
-                "https://example.com/api/post",
-                json={"platform": post.platform, "content": post.content},
-                timeout=30
+            social_account = SocialAccount.objects.get(
+                user=post.user,
+                platform=post.platform,
+                is_active=True
             )
-            
-            # Update status based on response
-            if response.status_code == 200:
-                post.status = 'posted'
-                logger.info(f"Successfully posted {post_id} to {post.platform}")
-            else:
-                post.status = 'failed'
-                logger.error(f"Failed to post {post_id}: HTTP {response.status_code}")
-            
+        except SocialAccount.DoesNotExist:
+            error_msg = f"No active {post.platform} account connected for user {post.user.username}"
+            logger.error(error_msg)
+            post.status = 'failed'
             post.save()
+            return
+        
+        # Update last_used_at
+        social_account.last_used_at = timezone.now()
+        social_account.save(update_fields=['last_used_at'])
+        
+        # Get the platform integration
+        integration = get_platform_integration(post.platform, social_account)
+        if not integration:
+            error_msg = f"Unsupported platform: {post.platform}"
+            logger.error(error_msg)
+            post.status = 'failed'
+            post.save()
+            return
+        
+        # Refresh token if needed
+        integration.refresh_token_if_needed()
+        
+        # Post to the platform
+        success, post_id_external, error_message = integration.post(
+            content=post.content,
+            media_url=post.media_url
+        )
+        
+        if success:
+            post.status = 'posted'
+            post.external_post_id = post_id_external
+            logger.info(f"Successfully posted {post_id} to {post.platform}. External ID: {post_id_external}")
+        else:
+            post.status = 'failed'
+            error_msg = error_message or "Unknown error"
+            logger.error(f"Failed to post {post_id} to {post.platform}: {error_msg}")
             
-        except requests.RequestException as e:
-            # Retry on network errors
-            logger.error(f"Network error publishing post {post_id}: {e}")
-            raise self.retry(exc=e)
-            
+            # Retry on certain errors (network issues, rate limits, etc.)
+            if "network" in error_msg.lower() or "timeout" in error_msg.lower():
+                raise self.retry(exc=Exception(error_msg))
+        
+        post.save()
+        
     except Post.DoesNotExist:
         logger.error(f"Post with ID {post_id} does not exist")
-        # Don't retry if post doesn't exist
+        return
+    except SocialAccount.DoesNotExist:
+        logger.error(f"No social account found for post {post_id}")
+        try:
+            post = Post.objects.get(id=post_id)
+            post.status = 'failed'
+            post.save()
+        except Post.DoesNotExist:
+            pass
         return
     except Exception as e:
         logger.error(f"Unexpected error publishing post {post_id}: {e}")
