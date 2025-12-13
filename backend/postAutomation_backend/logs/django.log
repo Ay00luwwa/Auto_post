@@ -689,3 +689,55 @@ INFO 2025-12-03 22:09:59,619 basehttp "GET /api/posts/?ordering=-scheduled_time 
 INFO 2025-12-03 22:09:59,624 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
 INFO 2025-12-03 22:09:59,646 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
 INFO 2025-12-03 22:09:59,652 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-10 21:01:55,974 autoreload Watching for file changes with StatReloader
+INFO 2025-12-10 21:09:46,293 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 16871
+WARNING 2025-12-10 21:11:38,402 log Unauthorized: /api/oauth/callback/twitter/
+WARNING 2025-12-10 21:11:38,403 basehttp "GET /api/oauth/callback/twitter/ HTTP/1.1" 401 5263
+INFO 2025-12-10 21:11:38,543 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-12-10 21:11:38,544 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-12-10 21:11:38,545 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-12-10 21:11:38,553 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-12-10 21:11:38,633 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-12-10 21:11:38,646 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-12-10 21:11:38,648 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-12-10 21:11:38,650 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-12-10 21:11:38,678 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-12-10 21:11:38,679 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-12-10 21:11:38,707 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-12-10 21:11:38,754 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2025-12-10 21:11:39,014 log Not Found: /favicon.ico
+WARNING 2025-12-10 21:11:39,014 basehttp "GET /favicon.ico HTTP/1.1" 404 4221
+INFO 2025-12-13 11:11:16,154 autoreload Watching for file changes with StatReloader
+INFO 2025-12-13 11:12:25,651 autoreload Watching for file changes with StatReloader
+INFO 2025-12-13 11:12:31,449 basehttp "GET /swagger/ HTTP/1.1" 200 2166
+INFO 2025-12-13 11:12:31,540 basehttp "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:31,546 basehttp "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:31,556 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:31,567 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:31,578 basehttp "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:31,632 basehttp "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:31,678 basehttp "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+INFO 2025-12-13 11:12:32,148 basehttp "GET /swagger/?format=openapi HTTP/1.1" 200 16871
+INFO 2025-12-13 11:12:40,621 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-13 11:12:41,586 basehttp "POST /api/auth/login/ HTTP/1.1" 200 483
+INFO 2025-12-13 11:12:41,659 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-12-13 11:12:41,710 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-13 11:12:41,819 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-13 11:12:41,822 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-13 11:12:41,824 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-13 11:12:41,829 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-13 11:12:41,924 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-13 11:12:41,924 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-13 11:12:41,936 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-13 11:12:41,936 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-13 11:12:47,526 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-13 11:12:47,528 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-13 11:25:11,840 basehttp "GET /redoc/ HTTP/1.1" 200 936
+INFO 2025-12-13 11:25:11,919 basehttp "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+INFO 2025-12-13 11:25:12,044 basehttp "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+INFO 2025-12-13 11:25:12,288 basehttp "GET /redoc/?format=openapi HTTP/1.1" 200 16871
+INFO 2025-12-13 11:25:12,308 basehttp "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+INFO 2025-12-13 11:38:49,049 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/settings.py changed, reloading.
+INFO 2025-12-13 11:38:51,218 autoreload Watching for file changes with StatReloader
+INFO 2025-12-13 11:38:56,134 autoreload /home/ayooluwa/Documents/codes/Auto_post/backend/postAutomation_backend/core/settings.py changed, reloading.
+INFO 2025-12-13 11:38:56,980 autoreload Watching for file changes with StatReloader
