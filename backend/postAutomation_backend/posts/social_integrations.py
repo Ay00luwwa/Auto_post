@@ -40,15 +40,13 @@ class TwitterIntegration(BaseSocialPlatform):
         Note: Media upload requires additional steps
         """
         try:
-            # Twitter API v2 endpoint for creating tweets
             url = f"{self.API_BASE}/tweets"
             
             payload = {
-                "text": content[:280]  # Twitter character limit
+                "text": content[:280] 
             }
             
-            # If media_url is provided, we'd need to upload media first
-            # This is a simplified version - full implementation would handle media upload
+
             if media_url:
                 logger.warning("Media upload for Twitter requires additional implementation")
             
@@ -73,7 +71,6 @@ class TwitterIntegration(BaseSocialPlatform):
     
     def refresh_token_if_needed(self) -> bool:
         """Twitter OAuth 2.0 token refresh"""
-        # Twitter uses OAuth 2.0 with refresh tokens
         if not self.social_account.refresh_token:
             return False
         
@@ -111,13 +108,13 @@ class InstagramIntegration(BaseSocialPlatform):
         Note: Requires Instagram Business or Creator account
         """
         try:
-            # Get the Instagram Business Account ID from metadata
+
             ig_account_id = self.social_account.metadata.get('instagram_account_id')
             if not ig_account_id:
                 return False, None, "Instagram account ID not found. Please reconnect your account."
             
             if media_url:
-                # Create media container first
+
                 create_url = f"{self.API_BASE}/{ig_account_id}/media"
                 create_payload = {
                     "image_url": media_url,
@@ -130,8 +127,6 @@ class InstagramIntegration(BaseSocialPlatform):
                     return False, None, f"Failed to create media container: {create_response.text}"
                 
                 creation_id = create_response.json().get('id')
-                
-                # Publish the media
                 publish_url = f"{self.API_BASE}/{ig_account_id}/media_publish"
                 publish_payload = {
                     "creation_id": creation_id,
@@ -145,7 +140,7 @@ class InstagramIntegration(BaseSocialPlatform):
                 else:
                     return False, None, f"Failed to publish: {publish_response.text}"
             else:
-                # Text-only post (requires different endpoint)
+                
                 return False, None, "Instagram requires media. Please provide a media URL."
                 
         except requests.RequestException as e:
@@ -163,15 +158,14 @@ class LinkedInIntegration(BaseSocialPlatform):
         Post to LinkedIn using LinkedIn API v2
         """
         try:
-            # Get user's LinkedIn URN from metadata
             person_urn = self.social_account.metadata.get('person_urn')
             if not person_urn:
                 return False, None, "LinkedIn person URN not found. Please reconnect your account."
             
-            # Create a share (post)
+           
             url = f"{self.API_BASE}/ugcPosts"
             
-            # Build share content
+            
             share_content = {
                 "shareContent": {
                     "shareCommentary": {
@@ -209,7 +203,7 @@ class LinkedInIntegration(BaseSocialPlatform):
             response = requests.post(url, json=payload, headers=headers, timeout=30)
             
             if response.status_code == 201:
-                # LinkedIn returns the URN in the Location header
+            
                 location = response.headers.get('Location', '')
                 post_id = location.split('/')[-1] if location else None
                 return True, post_id, None
