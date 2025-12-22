@@ -12,6 +12,7 @@ interface AuthContextType {
   loading: boolean;
   login: (username: string, password: string) => Promise<void>;
   register: (username: string, email: string, password: string, password2: string) => Promise<void>;
+  loginWithOAuth: (provider: 'google' | 'facebook' | 'github') => Promise<void>;
   logout: () => void;
   isAuthenticated: boolean;
 }
@@ -70,6 +71,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const loginWithOAuth = async (provider: 'google' | 'facebook' | 'github') => {
+    const data = await authAPI.initiateOAuth(provider);
+    // Redirect to OAuth provider
+    if (data.auth_url) {
+      window.location.href = data.auth_url;
+    } else {
+      throw new Error('Failed to get OAuth URL');
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
@@ -83,6 +94,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         loading,
         login,
         register,
+        loginWithOAuth,
         logout,
         isAuthenticated: !!user,
       }}

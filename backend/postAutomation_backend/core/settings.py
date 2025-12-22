@@ -30,8 +30,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_yasg',
-    'corsheaders',
     'django_filters',
+    'corsheaders',
 
     # Local apps
     'users',
@@ -88,13 +88,26 @@ MIDDLEWARE = [
 ]
 
 # CORS Settings
-CORS_ALLOWED_ORIGINS = config(
-    'CORS_ALLOWED_ORIGINS',
-    default='http://localhost:3000,http://localhost:5173,http://localhost:8000',
-    cast=Csv()
-)
+# CORS_ALLOWED_ORIGINS = config(
+#     'CORS_ALLOWED_ORIGINS',
+#     default='http://localhost:3000,http://localhost:5173,http://localhost:8000',
+#     cast=Csv()
+# )
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+]
+
+
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=False, cast=bool)  # Only for development
+# CORS_ALLOW_ALL_ORIGINS = config('CORS_ALLOW_ALL_ORIGINS', default=False, cast=bool)  # Only for development
 
 ROOT_URLCONF = 'core.urls'
 
@@ -215,3 +228,29 @@ LOGGING = {
 import os
 logs_dir = BASE_DIR / 'logs'
 os.makedirs(logs_dir, exist_ok=True)
+
+# OAuth Configuration for User Authentication
+GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID', default='')
+GOOGLE_CLIENT_SECRET = config('GOOGLE_CLIENT_SECRET', default='')
+
+FACEBOOK_APP_ID = config('FACEBOOK_APP_ID', default='')
+FACEBOOK_APP_SECRET = config('FACEBOOK_APP_SECRET', default='')
+
+GITHUB_CLIENT_ID = config('GITHUB_CLIENT_ID', default='')
+GITHUB_CLIENT_SECRET = config('GITHUB_CLIENT_SECRET', default='')
+
+# OAuth Configuration for Social Media Accounts
+TWITTER_CLIENT_ID = config('TWITTER_CLIENT_ID', default='')
+TWITTER_CLIENT_SECRET = config('TWITTER_CLIENT_SECRET', default='')
+
+LINKEDIN_CLIENT_ID = config('LINKEDIN_CLIENT_ID', default='')
+LINKEDIN_CLIENT_SECRET = config('LINKEDIN_CLIENT_SECRET', default='')
+
+INSTAGRAM_CLIENT_ID = config('INSTAGRAM_CLIENT_ID', default='')
+INSTAGRAM_CLIENT_SECRET = config('INSTAGRAM_CLIENT_SECRET', default='')
+
+YOUTUBE_CLIENT_ID = config('YOUTUBE_CLIENT_ID', default='')
+YOUTUBE_CLIENT_SECRET = config('YOUTUBE_CLIENT_SECRET', default='')
+
+# Frontend URL for OAuth redirects
+FRONTEND_URL = config('FRONTEND_URL', default='http://localhost:5173')

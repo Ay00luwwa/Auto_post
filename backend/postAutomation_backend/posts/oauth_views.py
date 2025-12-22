@@ -12,6 +12,9 @@ from django.urls import reverse
 from .models import SocialAccount
 import requests
 import logging
+import base64
+import secrets
+import hashlib
 
 logger = logging.getLogger(__name__)
 
@@ -88,9 +91,18 @@ class OAuthInitiateView(APIView):
         
         # Add platform-specific parameters
         if platform == 'twitter':
+            # Generate PKCE code verifier and challenge for Twitter
+            code_verifier = secrets.token_urlsafe(32)
+            code_challenge = base64.urlsafe_b64encode(
+                hashlib.sha256(code_verifier.encode()).digest()
+            ).decode().rstrip('=')
+            
+            # Store code verifier in session
+            request.session[f'{platform}_code_verifier'] = code_verifier
+            
             params.update({
-                'code_challenge': config.get('code_challenge'),
-                'code_challenge_method': config.get('code_challenge_method'),
+                'code_challenge': code_challenge,
+                'code_challenge_method': 'S256',
             })
         elif platform == 'youtube':
             params.update({
@@ -179,13 +191,208 @@ class OAuthCallbackView(APIView):
     
     def _exchange_code_for_tokens(self, platform, code, request):
         """Exchange authorization code for access token"""
-        # This is a placeholder - implement actual token exchange for each platform
-        # In production, use proper OAuth libraries like `requests-oauthlib`
-        return None
+        platform = platform.lower()
+        redirect_uri = request.build_absolute_uri(reverse('oauth_callback', kwargs={'platform': platform}))
+        
+        if platform == 'twitter':
+            return self._exchange_twitter_token(code, redirect_uri, request)
+        elif platform == 'linkedin':
+            return self._exchange_linkedin_token(code, redirect_uri, request)
+        elif platform == 'instagram':
+            return self._exchange_instagram_token(code, redirect_uri, request)
+        elif platform == 'youtube':
+            return self._exchange_youtube_token(code, redirect_uri, request)
+        else:
+            return None
+    
+    def _exchange_twitter_token(self, code, redirect_uri, request):
+        """Exchange Twitter authorization code for tokens"""
+        client_id = getattr(settings, 'TWITTER_CLIENT_ID', '')
+        client_secret = getattr(settings, 'TWITTER_CLIENT_SECRET', '')
+        code_verifier = request.session.get('twitter_code_verifier', '')
+        
+        token_url = 'https://api.twitter.com/2/oauth2/token'
+        data = {
+            'code': code,
+            'grant_type': 'authorization_code',
+            'client_id': client_id,
+            'redirect_uri': redirect_uri,
+            'code_verifier': code_verifier,
+        }
+        
+        auth_string = f"{client_id}:{client_secret}"
+        auth_bytes = auth_string.encode('ascii')
+        auth_b64 = base64.b64encode(auth_bytes).decode('ascii')
+        
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': f'Basic {auth_b64}',
+        }
+        
+        response = requests.post(token_url, data=data, headers=headers, timeout=30)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"Twitter token exchange failed: {response.text}")
+            return None
+    
+    def _exchange_linkedin_token(self, code, redirect_uri, request):
+        """Exchange LinkedIn authorization code for tokens"""
+        client_id = getattr(settings, 'LINKEDIN_CLIENT_ID', '')
+        client_secret = getattr(settings, 'LINKEDIN_CLIENT_SECRET', '')
+        
+        token_url = 'https://www.linkedin.com/oauth/v2/accessToken'
+        data = {
+            'grant_type': 'authorization_code',
+            'code': code,
+            'redirect_uri': redirect_uri,
+            'client_id': client_id,
+            'client_secret': client_secret,
+        }
+        
+        response = requests.post(token_url, data=data, timeout=30)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"LinkedIn token exchange failed: {response.text}")
+            return None
+    
+    def _exchange_instagram_token(self, code, redirect_uri, request):
+        """Exchange Instagram authorization code for tokens"""
+        client_id = getattr(settings, 'INSTAGRAM_CLIENT_ID', '')
+        client_secret = getattr(settings, 'INSTAGRAM_CLIENT_SECRET', '')
+        
+        token_url = 'https://api.instagram.com/oauth/access_token'
+        data = {
+            'client_id': client_id,
+            'client_secret': client_secret,
+            'grant_type': 'authorization_code',
+            'redirect_uri': redirect_uri,
+            'code': code,
+        }
+        
+        response = requests.post(token_url, data=data, timeout=30)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"Instagram token exchange failed: {response.text}")
+            return None
+    
+    def _exchange_youtube_token(self, code, redirect_uri, request):
+        """Exchange YouTube/Google authorization code for tokens"""
+        client_id = getattr(settings, 'YOUTUBE_CLIENT_ID', '')
+        client_secret = getattr(settings, 'YOUTUBE_CLIENT_SECRET', '')
+        
+        token_url = 'https://oauth2.googleapis.com/token'
+        data = {
+            'code': code,
+            'client_id': client_id,
+            'client_secret': client_secret,
+            'redirect_uri': redirect_uri,
+            'grant_type': 'authorization_code',
+        }
+        
+        response = requests.post(token_url, data=data, timeout=30)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            logger.error(f"YouTube token exchange failed: {response.text}")
+            return None
     
     def _get_user_info(self, platform, access_token):
         """Get user information from platform"""
-        # This is a placeholder - implement actual API calls for each platform
+        platform = platform.lower()
+        
+        if platform == 'twitter':
+            return self._get_twitter_user_info(access_token)
+        elif platform == 'linkedin':
+            return self._get_linkedin_user_info(access_token)
+        elif platform == 'instagram':
+            return self._get_instagram_user_info(access_token)
+        elif platform == 'youtube':
+            return self._get_youtube_user_info(access_token)
+        else:
+            return {}
+    
+    def _get_twitter_user_info(self, access_token):
+        """Get Twitter user information"""
+        url = 'https://api.twitter.com/2/users/me'
+        headers = {'Authorization': f'Bearer {access_token}'}
+        params = {'user.fields': 'username,name,profile_image_url'}
+        
+        response = requests.get(url, headers=headers, params=params, timeout=30)
+        if response.status_code == 200:
+            data = response.json().get('data', {})
+            return {
+                'id': data.get('id'),
+                'username': data.get('username'),
+                'name': data.get('name'),
+            }
+        return {}
+    
+    def _get_linkedin_user_info(self, access_token):
+        """Get LinkedIn user information"""
+        url = 'https://api.linkedin.com/v2/userinfo'
+        headers = {'Authorization': f'Bearer {access_token}'}
+        
+        response = requests.get(url, headers=headers, timeout=30)
+        if response.status_code == 200:
+            data = response.json()
+            # Also get person URN
+            person_url = 'https://api.linkedin.com/v2/me'
+            person_response = requests.get(person_url, headers=headers, timeout=30)
+            person_urn = None
+            if person_response.status_code == 200:
+                person_data = person_response.json()
+                person_urn = person_data.get('id')
+            
+            return {
+                'id': data.get('sub'),
+                'username': data.get('name', ''),
+                'name': data.get('name', ''),
+                'person_urn': person_urn,
+            }
+        return {}
+    
+    def _get_instagram_user_info(self, access_token):
+        """Get Instagram user information"""
+        # Instagram Basic Display API
+        url = 'https://graph.instagram.com/me'
+        params = {
+            'fields': 'id,username',
+            'access_token': access_token,
+        }
+        
+        response = requests.get(url, params=params, timeout=30)
+        if response.status_code == 200:
+            data = response.json()
+            return {
+                'id': data.get('id'),
+                'username': data.get('username'),
+                'name': data.get('username'),
+            }
+        return {}
+    
+    def _get_youtube_user_info(self, access_token):
+        """Get YouTube user information"""
+        url = 'https://www.googleapis.com/youtube/v3/channels'
+        params = {
+            'part': 'snippet',
+            'mine': 'true',
+            'access_token': access_token,
+        }
+        
+        response = requests.get(url, params=params, timeout=30)
+        if response.status_code == 200:
+            data = response.json()
+            items = data.get('items', [])
+            if items:
+                snippet = items[0].get('snippet', {})
+                return {
+                    'id': items[0].get('id'),
+                    'username': snippet.get('title', ''),
+                    'name': snippet.get('title', ''),
+                }
         return {}
     
     def _parse_expires_at(self, token_data):

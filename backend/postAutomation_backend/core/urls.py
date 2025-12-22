@@ -5,6 +5,11 @@ from rest_framework_simplejwt.views import TokenRefreshView
 from posts.views import PostViewSet, SocialAccountViewSet
 from posts.oauth_views import OAuthInitiateView, OAuthCallbackView
 from users.views import UserRegistrationView, UserProfileView, CustomTokenObtainPairView
+from users.oauth_views import (
+    GoogleOAuthInitiateView, GoogleOAuthCallbackView,
+    FacebookOAuthInitiateView, FacebookOAuthCallbackView,
+    GitHubOAuthInitiateView, GitHubOAuthCallbackView
+)
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
@@ -44,7 +49,15 @@ urlpatterns = [
     path('api/auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/auth/profile/', UserProfileView.as_view(), name='user_profile'),
     
-    # OAuth endpoints
+    # OAuth user authentication endpoints (Google, Facebook, GitHub)
+    path('api/auth/oauth/google/initiate/', GoogleOAuthInitiateView.as_view(), name='google_oauth_initiate'),
+    path('api/auth/oauth/google/callback/', GoogleOAuthCallbackView.as_view(), name='google_oauth_callback'),
+    path('api/auth/oauth/facebook/initiate/', FacebookOAuthInitiateView.as_view(), name='facebook_oauth_initiate'),
+    path('api/auth/oauth/facebook/callback/', FacebookOAuthCallbackView.as_view(), name='facebook_oauth_callback'),
+    path('api/auth/oauth/github/initiate/', GitHubOAuthInitiateView.as_view(), name='github_oauth_initiate'),
+    path('api/auth/oauth/github/callback/', GitHubOAuthCallbackView.as_view(), name='github_oauth_callback'),
+    
+    # OAuth endpoints for social media accounts (Twitter, LinkedIn, Instagram, YouTube)
     path('api/oauth/initiate/<str:platform>/', OAuthInitiateView.as_view(), name='oauth_initiate'),
     path('api/oauth/callback/<str:platform>/', OAuthCallbackView.as_view(), name='oauth_callback'),
     

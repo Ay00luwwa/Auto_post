@@ -99,6 +99,12 @@ export const authAPI = {
     const response = await api.put('/auth/profile/', data);
     return response.data;
   },
+  
+  // OAuth authentication
+  initiateOAuth: async (provider: 'google' | 'facebook' | 'github') => {
+    const response = await api.post(`/auth/oauth/${provider}/initiate/`);
+    return response.data;
+  },
 };
 
 // Posts API

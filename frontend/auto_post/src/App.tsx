@@ -1,14 +1,17 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { Layout } from './components/Layout';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
+import { OAuthCallback } from './pages/OAuthCallback';
 import { Dashboard } from './pages/Dashboard';
 import { Posts } from './pages/Posts';
 import { PostForm } from './pages/PostForm';
 import { Stats } from './pages/Stats';
 import { Connections } from './pages/Connections';
+import { Profile } from './pages/Profile';
 
 const AppRoutes = () => {
   const { isAuthenticated, loading } = useAuth();
@@ -30,6 +33,10 @@ const AppRoutes = () => {
       <Route
         path="/register"
         element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Register />}
+      />
+      <Route
+        path="/oauth/:provider/callback"
+        element={<OAuthCallback />}
       />
       <Route
         path="/"
@@ -95,17 +102,29 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Profile />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 };
 
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <AppRoutes />
-      </AuthProvider>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </Router>
+    </ThemeProvider>
   );
 }
 
