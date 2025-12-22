@@ -44,7 +44,7 @@ export const Sidebar = ({ isOpen, onClose, isCollapsed }: SidebarProps) => {
           }`}>
             {!isCollapsed && (
               <h1 className="text-xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 dark:from-cyan-400 dark:to-blue-500 bg-clip-text text-transparent">
-                PostAuto
+                Post Stack
               </h1>
             )}
             {isCollapsed && (
@@ -105,7 +105,7 @@ export const Sidebar = ({ isOpen, onClose, isCollapsed }: SidebarProps) => {
           {!isCollapsed && (
             <div className="p-4 border-t border-gray-200 dark:border-gray-700/50">
               <div className="text-xs text-gray-500 dark:text-gray-500 text-center">
-                © 2024 PostAutomation
+                © 2025 Post Stack
               </div>
             </div>
           )}
