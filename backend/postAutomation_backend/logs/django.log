@@ -2153,3 +2153,9 @@ INFO 2025-12-22 21:26:50,853 basehttp "GET /api/posts/?ordering=-scheduled_time 
 INFO 2025-12-22 21:26:50,857 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
 INFO 2025-12-22 21:26:50,861 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
 INFO 2025-12-22 21:26:50,865 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-22 21:32:06,120 basehttp "POST /api/auth/login/ HTTP/1.1" 200 483
+INFO 2025-12-22 21:32:06,139 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-22 21:32:06,369 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-22 21:32:06,381 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-22 21:32:06,390 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-22 21:32:06,391 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
