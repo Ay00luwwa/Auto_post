@@ -2558,3 +2558,147 @@ INFO 2025-12-25 20:09:53,881 basehttp "GET /static/jazzmin/css/main.css HTTP/1.1
 INFO 2025-12-25 20:09:53,992 basehttp "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 200 2637
 INFO 2025-12-25 20:09:54,177 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
 INFO 2025-12-25 20:09:54,184 basehttp "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+INFO 2025-12-27 22:19:48,908 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-27 22:20:02,264 log Not Found: /
+WARNING 2025-12-27 22:20:02,265 basehttp "GET / HTTP/1.1" 404 5402
+WARNING 2025-12-27 22:20:02,409 log Not Found: /favicon.ico
+WARNING 2025-12-27 22:20:02,415 basehttp "GET /favicon.ico HTTP/1.1" 404 5453
+WARNING 2025-12-27 22:20:12,048 log Not Found: /api/auth/
+WARNING 2025-12-27 22:20:12,049 basehttp "GET /api/auth/ HTTP/1.1" 404 10724
+INFO 2025-12-27 22:20:16,455 basehttp "GET /api/auth/login HTTP/1.1" 301 0
+WARNING 2025-12-27 22:20:16,897 log Method Not Allowed: /api/auth/login/
+WARNING 2025-12-27 22:20:16,898 basehttp "GET /api/auth/login/ HTTP/1.1" 405 7696
+INFO 2025-12-27 22:20:17,040 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-12-27 22:20:17,040 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-12-27 22:20:17,041 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-12-27 22:20:17,043 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-12-27 22:20:17,054 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-12-27 22:20:17,172 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-12-27 22:20:17,178 basehttp "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-12-27 22:20:17,188 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-12-27 22:20:17,191 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-12-27 22:20:17,196 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-12-27 22:20:17,196 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-12-27 22:20:17,207 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-12-27 22:21:22,300 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+WARNING 2025-12-27 22:21:22,374 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-27 22:21:22,381 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-12-27 22:21:22,429 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-27 22:21:22,434 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-12-27 22:21:22,445 basehttp "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-12-27 22:21:22,455 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-27 22:21:22,491 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-27 22:21:24,863 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:21:24,863 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:21:25,125 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-27 22:21:25,137 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-27 22:21:27,294 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 22:21:29,448 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 22:21:29,653 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 22:21:33,782 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 22:23:44,801 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:23:45,432 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:23:48,809 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:23:48,812 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:23:48,872 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-27 22:23:48,874 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-27 22:23:48,881 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-27 22:23:48,886 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-27 22:23:50,729 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 22:23:50,731 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 22:23:52,877 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 22:23:52,879 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 22:24:08,174 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 22:24:08,284 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 23:01:17,067 basehttp "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-12-27 23:01:25,192 basehttp "POST /api/auth/login/ HTTP/1.1" 200 483
+INFO 2025-12-27 23:01:25,266 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+INFO 2025-12-27 23:01:26,788 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-27 23:01:27,040 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-27 23:01:27,043 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-27 23:01:27,086 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-27 23:01:29,861 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 23:01:30,584 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 23:01:30,627 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 23:01:31,398 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 23:01:32,523 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 23:01:32,690 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 23:01:34,164 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 23:01:34,164 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-27 23:01:35,474 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 23:01:35,476 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-27 23:10:10,817 basehttp "POST /api/auth/login/ HTTP/1.1" 200 8140
+INFO 2025-12-27 23:10:11,064 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-12-27 23:10:11,064 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-12-27 23:10:11,065 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-12-27 23:10:11,067 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+WARNING 2025-12-27 23:10:11,423 log Not Found: /favicon.ico
+INFO 2025-12-28 19:08:22,787 autoreload Watching for file changes with StatReloader
+WARNING 2025-12-28 19:12:09,722 log Not Found: /
+WARNING 2025-12-28 19:12:09,723 basehttp "GET / HTTP/1.1" 404 5402
+WARNING 2025-12-28 19:12:09,929 log Not Found: /favicon.ico
+WARNING 2025-12-28 19:12:09,929 basehttp "GET /favicon.ico HTTP/1.1" 404 5453
+WARNING 2025-12-28 19:12:57,629 log Not Found: /api/auth/
+WARNING 2025-12-28 19:12:57,630 basehttp "GET /api/auth/ HTTP/1.1" 404 10724
+WARNING 2025-12-28 19:13:10,955 log Not Found: /api/auth/health
+WARNING 2025-12-28 19:13:10,956 basehttp "GET /api/auth/health HTTP/1.1" 404 10742
+INFO 2025-12-28 19:13:20,521 basehttp "GET /health HTTP/1.1" 301 0
+INFO 2025-12-28 19:13:28,415 basehttp "GET /health/ HTTP/1.1" 200 5407
+INFO 2025-12-28 19:13:28,662 basehttp "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-12-28 19:13:28,688 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-12-28 19:13:44,731 basehttp "GET /api/auth/login HTTP/1.1" 301 0
+WARNING 2025-12-28 19:13:44,936 log Method Not Allowed: /api/auth/login/
+WARNING 2025-12-28 19:13:44,939 basehttp "GET /api/auth/login/ HTTP/1.1" 405 7696
+INFO 2025-12-28 19:13:51,199 basehttp "POST /api/auth/login/ HTTP/1.1" 200 8140
+INFO 2025-12-28 19:54:34,051 basehttp "OPTIONS /api/auth/profile/ HTTP/1.1" 200 0
+WARNING 2025-12-28 19:54:34,065 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-28 19:54:34,065 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+WARNING 2025-12-28 19:54:34,111 log Unauthorized: /api/auth/profile/
+WARNING 2025-12-28 19:54:34,112 basehttp "GET /api/auth/profile/ HTTP/1.1" 401 183
+INFO 2025-12-28 19:54:34,117 basehttp "OPTIONS /api/auth/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-12-28 19:54:34,121 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-28 19:54:34,160 basehttp "POST /api/auth/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-12-28 19:54:40,996 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-28 19:54:40,996 basehttp "GET /api/auth/profile/ HTTP/1.1" 200 137
+INFO 2025-12-28 19:54:41,201 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-28 19:54:41,212 basehttp "OPTIONS /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 0
+INFO 2025-12-28 19:54:42,832 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 19:54:44,625 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 19:54:44,636 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 19:54:48,155 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 19:55:01,005 basehttp "OPTIONS /api/social-accounts/status/ HTTP/1.1" 200 0
+INFO 2025-12-28 19:55:01,006 basehttp "OPTIONS /api/social-accounts/status/ HTTP/1.1" 200 0
+INFO 2025-12-28 19:55:04,646 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:55:04,647 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:55:10,966 basehttp "OPTIONS /api/oauth/initiate/instagram/ HTTP/1.1" 200 0
+INFO 2025-12-28 19:55:12,635 basehttp "POST /api/oauth/initiate/instagram/ HTTP/1.1" 200 282
+INFO 2025-12-28 19:55:23,175 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:56:38,998 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 19:56:38,998 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 19:56:44,628 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:56:44,630 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:56:50,258 basehttp "POST /api/oauth/initiate/instagram/ HTTP/1.1" 200 282
+INFO 2025-12-28 19:56:55,688 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:57:11,693 basehttp "OPTIONS /api/oauth/initiate/twitter/ HTTP/1.1" 200 0
+INFO 2025-12-28 19:57:20,050 basehttp "POST /api/oauth/initiate/twitter/ HTTP/1.1" 200 388
+INFO 2025-12-28 19:57:25,273 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 19:57:28,549 basehttp "POST /api/oauth/initiate/twitter/ HTTP/1.1" 200 388
+INFO 2025-12-28 19:57:34,477 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 20:04:38,906 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-28 20:04:38,917 basehttp "OPTIONS /api/posts/stats/ HTTP/1.1" 200 0
+INFO 2025-12-28 20:04:41,535 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 20:04:41,536 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 20:04:43,474 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 20:04:43,475 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 20:05:04,056 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 20:05:04,057 basehttp "GET /api/social-accounts/status/ HTTP/1.1" 200 475
+INFO 2025-12-28 20:05:11,125 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 20:05:11,126 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 20:05:13,065 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 20:05:13,066 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+INFO 2025-12-28 20:42:04,750 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 20:42:06,286 basehttp "GET /api/posts/?ordering=-scheduled_time HTTP/1.1" 200 52
+INFO 2025-12-28 20:42:06,286 basehttp "GET /api/posts/stats/ HTTP/1.1" 200 126
+WARNING 2025-12-28 22:00:22,094 log Method Not Allowed: /api/auth/oauth/google/initiate/
+WARNING 2025-12-28 22:00:22,136 basehttp "GET /api/auth/oauth/google/initiate/ HTTP/1.1" 405 5870
+WARNING 2025-12-28 22:00:23,105 log Not Found: /favicon.ico
